@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="184dp"
+        android:gravity="center|center_vertical"
+        android:text="LOGIN"
+        android:textColor="#CEC2FF"
+        android:textSize="40sp"
+        android:fontFamily="@font/dovemayo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="199dp"
+        android:alpha="0.75"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/login_pic1" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="37dp"
+        android:alpha="0.75"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/login_pic2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="37dp"
+        android:alpha="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_pic3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="199dp"
+        android:layout_marginEnd="37dp"
+        android:alpha="0.75"
+        android:rotation="27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_pic4" />
+
+    <RadioGroup
+        android:id="@+id/rbg_logintype"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.299"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:checkedButton="@id/rb_child" >
+
+        <RadioButton
+            android:id="@+id/rb_child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dovemayo"
+            android:text="아동"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rb_parents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/dovemayo"
+            android:text="부모"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="215dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:fontFamily="@font/dovemayo"
+        android:hint="아이디"
+        android:inputType="textPersonName"
+        android:maxLength="12"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbg_logintype" />
+
+    <EditText
+        android:id="@+id/et_pass"
+        android:layout_width="215dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:fontFamily="@font/dovemayo"
+        android:hint="패스워드"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_id" />
+
+    <CheckBox
+        android:id="@+id/cb_autoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dongle"
+        android:text="자동로그인"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="@+id/et_pass"
+        app:layout_constraintTop_toBottomOf="@+id/et_pass" />
+
+    <com.example.blueday4meals.Function.CustomButtonOutLineView
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_weight="1"
+        android:background="@color/purple"
+        android:fontFamily="@font/dovemayo"
+        android:text="로그인"
+        android:textColor="#E4E7FF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_pass"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_pass"
+        app:layout_constraintTop_toBottomOf="@+id/et_pass"
+        app:textStroke="true"
+        app:textStrokeColor="#CEC2FF"
+        app:textStrokeWidth="20.0" />
+
+    <com.example.blueday4meals.Function.CustomButtonOutLineView
+        android:id="@+id/btn_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="@color/purple"
+        android:fontFamily="@font/dovemayo"
+        android:text="회원가입"
+        android:textColor="#E4E7FF"
+        android:textSize="30sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:textStroke="true"
+        app:textStrokeColor="#CEC2FF"
+        app:textStrokeWidth="20.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
